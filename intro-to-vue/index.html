@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Product App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="nav-bar"></div>
+
+    <div id="app">
+        <product v-bind:premium="premium" @add-to-cart="updateCart" @remove-from-cart="removeFromCart"></product>
+        <div class="cart">
+            <p>Cart ({{ cart.length }})</p>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
